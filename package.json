@@ -1,0 +1,28 @@
+{
+  "name": "dialogpm-bot",
+  "version": "0.1.0",
+  "description": "Bot API client for Dialog, the private messenger: send notifications, pictures and buttons to the people who started your bot.",
+  "keywords": ["dialog", "bot", "messenger", "notifications", "chat", "bot-api"],
+  "homepage": "https://dialog.pm",
+  "repository": { "type": "git", "url": "git+https://github.com/DialogPM/dialog-js.git" },
+  "bugs": "https://github.com/DialogPM/dialog-js/issues",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "engines": { "node": ">=20.3" },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test test/client.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0"
+  }
+}
